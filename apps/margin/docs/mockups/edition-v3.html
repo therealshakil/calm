@@ -1,35 +1,17 @@
 <title>Margin — daily edition (mockup)</title>
 <style>
-  :root {
-    /* research-led: warm off-white ground + soft warm-black ink reduce pattern
-       glare / visual stress (BDA; Meares-Irlen). Not cosmetic cream. */
-    --ground: #F7F4EC;
-    --ink: #26231E;
-    --ink-2: #6E6757;
-    --rule: rgba(38, 35, 30, 0.16);
-    --rule-strong: rgba(38, 35, 30, 0.42);
-
-    /* mixed type system: hand = warm editorial voice (masthead, from-the-desk,
-       sign-off); serif = serious work content (the lead). both are stand-ins. */
-    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Hoefler Text", Georgia, serif;
-    --hand: "Bradley Hand", "Chalkboard SE", "Marker Felt", "Comic Sans MS", cursive;
-    --body: "Avenir Next", system-ui, -apple-system, "Segoe UI", sans-serif;
-  }
-  html.dark {
-    --ground: #1B1814;
-    --ink: #E9E4D8;
-    --ink-2: #948D7E;
-    --rule: rgba(233, 228, 216, 0.15);
-    --rule-strong: rgba(233, 228, 216, 0.40);
-  }
+  /* Canon, imported rather than copied: tokens.css (colour + faces) and calm-fonts.css (the four faces).
+     Dark follows the OS, or is forced with [data-theme]. */
+  @import "../../../../calm-fonts.css";
+  @import "../../../../tokens.css";
 
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0;
-    background: var(--ground);
-    color: var(--ink);
-    font-family: var(--body);
+    background: var(--calm-bg);
+    color: var(--calm-fg);
+    font-family: var(--calm-font-body);
     line-height: 1.62;
     transition: background 320ms ease, color 320ms ease;
   }
@@ -52,9 +34,9 @@
     font-size: 12px;
     letter-spacing: 0.10em;
     text-transform: uppercase;
-    color: var(--ink-2);
+    color: var(--calm-dim);
     padding-bottom: 14px;
-    border-bottom: 1px solid var(--rule);
+    border-bottom: 1px solid var(--calm-line);
   }
   .editionline .meta { display: flex; gap: 14px; align-items: baseline; }
 
@@ -63,21 +45,21 @@
     font-size: 12px;
     letter-spacing: 0.10em;
     text-transform: uppercase;
-    color: var(--ink-2);
+    color: var(--calm-dim);
     background: transparent;
-    border: 1px solid var(--rule);
+    border: 1px solid var(--calm-line);
     border-radius: 999px;
     padding: 5px 12px;
     cursor: pointer;
     transition: border-color 200ms ease, color 200ms ease;
   }
-  .toggle:hover { color: var(--ink); border-color: var(--rule-strong); }
-  .toggle:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+  .toggle:hover { color: var(--calm-fg); border-color: var(--calm-dim); }
+  .toggle:focus-visible { outline: 2px solid var(--calm-fg); outline-offset: 2px; }
 
   /* ---- masthead (hand) ---- */
   .masthead { text-align: center; padding: 30px 0 18px; }
   .masthead h1 {
-    font-family: var(--hand);
+    font-family: var(--calm-font-hand);
     font-weight: 700;
     font-size: clamp(50px, 12vw, 96px);
     line-height: 0.96;
@@ -89,10 +71,10 @@
     font-size: 12px;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--ink-2);
+    color: var(--calm-dim);
   }
-  .rule-double { border: 0; border-top: 3px double var(--rule-strong); margin: 18px 0 0; }
-  .rule { border: 0; border-top: 1px solid var(--rule); margin: 30px 0; }
+  .rule-double { border: 0; border-top: 3px double var(--calm-dim); margin: 18px 0 0; }
+  .rule { border: 0; border-top: 1px solid var(--calm-line); margin: 30px 0; }
 
   /* ---- section labels ---- */
   .label {
@@ -100,14 +82,14 @@
     font-weight: 600;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--ink-2);
+    color: var(--calm-dim);
     margin: 0 0 12px;
   }
 
   /* ---- from the desk (hand) ---- */
   .desk { padding-top: 26px; }
   .desk p.note {
-    font-family: var(--hand);
+    font-family: var(--calm-font-hand);
     font-size: clamp(19px, 2.8vw, 23px);
     line-height: 1.4;
     margin: 0;
@@ -117,7 +99,7 @@
   /* ---- lead (serif — serious work content) ---- */
   .lead { display: grid; grid-template-columns: 1fr 140px; gap: 28px; align-items: start; }
   .lead h2 {
-    font-family: var(--serif);
+    font-family: var(--calm-font-serif);
     font-weight: 500;
     font-size: clamp(30px, 5.4vw, 50px);
     line-height: 1.08;
@@ -125,34 +107,34 @@
     max-width: 16ch;
   }
   .lead .why { margin: 18px 0 0; max-width: 52ch; font-size: 17px; }
-  .lead .spot { color: var(--ink); justify-self: end; }
+  .lead .spot { color: var(--calm-fg); justify-self: end; }
   .action {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     margin-top: 20px;
     font-size: 15px;
-    color: var(--ink);
+    color: var(--calm-fg);
     text-decoration: none;
-    border-bottom: 1px solid var(--rule-strong);
+    border-bottom: 1px solid var(--calm-dim);
     padding-bottom: 3px;
     transition: gap 200ms ease, border-color 200ms ease;
   }
-  .action:hover { gap: 12px; border-color: var(--ink); }
-  .action:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+  .action:hover { gap: 12px; border-color: var(--calm-fg); }
+  .action:focus-visible { outline: 2px solid var(--calm-fg); outline-offset: 4px; }
 
   /* ---- two columns ---- */
   .cols { display: grid; grid-template-columns: 1.25fr 1fr; gap: 40px; }
-  .cols .col + .col { border-left: 1px solid var(--rule); padding-left: 40px; }
+  .cols .col + .col { border-left: 1px solid var(--calm-line); padding-left: 40px; }
 
   .plate { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 18px; }
   .plate li .t { font-size: 17px; line-height: 1.35; }
-  .plate li .s { font-size: 14px; color: var(--ink-2); margin-top: 2px; }
+  .plate li .s { font-size: 14px; color: var(--calm-dim); margin-top: 2px; }
   .plate li.due .t { font-weight: 700; }
   .due-mark {
     display: inline-block;
     width: 8px; height: 8px;
-    background: var(--ink);
+    background: var(--calm-fg);
     margin-right: 9px;
     vertical-align: 1px;
   }
@@ -163,23 +145,23 @@
   /* ---- settled ---- */
   .settled { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
   .settled li { font-size: 16px; display: flex; gap: 11px; align-items: baseline; }
-  .settled .mk { font-family: var(--serif); color: var(--ink-2); }
-  .settled li.letgo .x { text-decoration: line-through; text-decoration-color: var(--rule-strong); color: var(--ink-2); }
+  .settled .mk { font-family: var(--calm-font-serif); color: var(--calm-dim); }
+  .settled li.letgo .x { text-decoration: line-through; text-decoration-color: var(--calm-dim); color: var(--calm-dim); }
 
   /* ---- cartoon ---- */
   .cartoon { text-align: center; }
   .panel {
-    border: 1px solid var(--rule-strong);
+    border: 1px solid var(--calm-dim);
     padding: 26px;
     display: inline-flex;
-    color: var(--ink);
+    color: var(--calm-fg);
     margin-bottom: 14px;
   }
   .cartoon .cap {
-    font-family: var(--serif);
+    font-family: var(--calm-font-serif);
     font-style: italic;
     font-size: 16px;
-    color: var(--ink-2);
+    color: var(--calm-dim);
     max-width: 40ch;
     margin: 0 auto;
   }
@@ -187,7 +169,7 @@
   /* ---- ending (hand — the editorial voice signing off) ---- */
   .end { text-align: center; padding-top: 8px; }
   .end p.sign {
-    font-family: var(--hand);
+    font-family: var(--calm-font-hand);
     font-size: clamp(20px, 3.2vw, 25px);
     line-height: 1.35;
     margin: 0;
@@ -195,15 +177,15 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .end .bye { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-2); margin-top: 14px; }
+  .end .bye { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--calm-dim); margin-top: 14px; }
 
   .colophon {
     margin-top: 56px;
     padding-top: 16px;
-    border-top: 1px solid var(--rule);
+    border-top: 1px solid var(--calm-line);
     font-size: 11px;
     letter-spacing: 0.04em;
-    color: var(--ink-2);
+    color: var(--calm-dim);
     text-align: center;
     line-height: 1.7;
   }
@@ -212,7 +194,7 @@
     .lead { grid-template-columns: 1fr; }
     .lead .spot { justify-self: start; order: -1; }
     .cols { grid-template-columns: 1fr; gap: 30px; }
-    .cols .col + .col { border-left: 0; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 30px; }
+    .cols .col + .col { border-left: 0; padding-left: 0; border-top: 1px solid var(--calm-line); padding-top: 30px; }
   }
 </style>
 
@@ -321,7 +303,7 @@
 
   <p class="colophon">
     Mockup &middot; paper &amp; ink warmth is research-led (reduces glare / visual stress), not cosmetic<br />
-    body stands in for Atkinson Hyperlegible / Lexend &middot; hand + serif are stand-ins &middot; no accent colour
+    set in the calm faces and tokens &middot; no accent colour
   </p>
 
 </div>
@@ -331,10 +313,10 @@
     var root = document.documentElement;
     var theme = document.getElementById("theme");
     function setTheme(dark) {
-      root.classList.toggle("dark", dark);
+      root.setAttribute("data-theme", dark ? "dark" : "light");
       theme.textContent = dark ? "Light" : "Dark";
     }
     setTheme(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
-    theme.addEventListener("click", function () { setTheme(!root.classList.contains("dark")); });
+    theme.addEventListener("click", function () { setTheme(root.getAttribute("data-theme") !== "dark"); });
   })();
 </script>

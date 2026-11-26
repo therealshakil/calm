@@ -10,6 +10,16 @@
             "statusMessage": "Syncing theme into Ghostty"
           }
         ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/scripts/calm-check.py\"",
+            "statusMessage": "calm: checking against the tokens"
+          }
+        ]
       }
     ]
   }
