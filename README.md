@@ -25,7 +25,6 @@ The [Constitution](./CONSTITUTION.md) is the law, and everything here answers to
 | Skills: the design system, the council, drift | [`.claude/skills/`](./.claude/skills/) |
 | A terminal theme and calm ASCII art | [`assets/terminal/`](./assets/terminal/), [`assets/drift/`](./assets/drift/) |
 | Apps in progress: Margin, study, gutter, mail | [`apps/`](./apps/) |
-| Ideas, parked without a sound | [`Calm.md`](./Calm.md) |
 
 ## Install
 

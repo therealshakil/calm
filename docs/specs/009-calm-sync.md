@@ -112,7 +112,7 @@ absence-of-copy self-exempting (R8); **manifest** = a Markdown table (`docs/inhe
 
 - The **compliance gap** is deliberately out of this cut: calm-sync reconciles the inherited *surface* (links
   + copies), not whether an adopter's own work satisfies a new Article (e.g. reverie's UI vs Article XI).
-  Parked as a future seed — *calm-review* — in [`Calm.md`](../../Calm.md): a human review, never an auto-audit.
+  Parked as a future seed — *calm-review* — in `Calm.md` (the private idea-space): a human review, never an auto-audit.
 
 ## Tasks
 *(fill at build time — smallest first; each cites the requirement it satisfies)*
