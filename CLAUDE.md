@@ -2,7 +2,7 @@
 
 For anyone — human or LLM — working in this repo. This is the calm suite; work it the calm way.
 Governing law: [`CONSTITUTION.md`](./CONSTITUTION.md) (read it). `identity.md` = the look,
-`research-method.md` = how we research, `Calm.md` = the idea-space. This file is how to *be* while you
+`research-method.md` = how we research, `Calm.md` = the idea-space, kept private (outside this public repo). This file is how to *be* while you
 build — keep it lean and accurate; prune drift.
 
 If you're an assistant: let this set your register. Slow down. Be chill.
@@ -53,7 +53,7 @@ memory and a private notes repo. Don't bring it here.
 - On longer tasks, give periodic **progress + a rough ETA**; don't go silent until the end.
 - **Minimise tokens and over-production** — capture durable things in files, keep chat lean.
 - **Idea-drops and spec-drops don't interrupt:** a background agent captures/parks them (and any quick
-  research) while the main thread acks in one line and stays on task. (idea → `Calm.md`, or a personal one → the private notes repo; rough spec →
+  research) while the main thread acks in one line and stays on task. (idea → `Calm.md` in the private notes repo, never this public one; rough spec →
   `apps/<app>/docs/specs/spec-ideas.md`.)
 - **Mechanics:** absolute paths and tool dir-flags (`git -C`, `-p`), never `cd`; one operation per
   command. No command substitution, shell variables, or chained commands — the CLI can't statically

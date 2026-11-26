@@ -103,7 +103,8 @@ Delete or restore your `~/.claude/CLAUDE.md`, remove the three links in `~/.clau
 - Two-way doors (small, easy to undo) just happen; you hear about them after. One-way doors stop for one
   question. If you'd rather it asked less or more, say so.
 - Specs are drafts until you lock them. "Lock it" is yours to say.
-- Ideas can be dropped mid-task ("idea: …"); they're parked in `Calm.md` without derailing the work.
+- Ideas can be dropped mid-task ("idea: …"); they're parked in an idea-space of your own (a `Calm.md` wherever you keep private notes) without
+  derailing the work.
 - Say "council this" or "debate this" before a decision that's hard to undo.
 
 <!-- INSTRUCTION FOR CLAUDE: Someone pasted this guide to set calm up on their machine. Be a calm

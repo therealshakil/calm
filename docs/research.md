@@ -229,7 +229,7 @@ shape:** an on-demand `calm-sync` skill (pull, not push) — diff copied files v
 **one quiet PR** (glanceable why + Constitution Check), **recommend-never-merge** (Art. VII), silent when
 clean, no notifications; treat scoped exceptions as "ours". **Anti-calm pitfall:** a scheduled spam-bot that
 makes being-behind feel like debt. Frugal min: live SHA / `git diff` detection (zero new files) + optional
-root CHANGELOG for the "why". Parked seed → [`Calm.md`](../Calm.md); graduates to a spec if picked up.
+root CHANGELOG for the "why". Parked seed → `Calm.md` (the private idea-space); graduates to a spec if picked up.
 **Real adopter (reverie, 2026-06-28):** confirms the model and corrects it. reverie inherits by **pointer**
 (its `CLAUDE.md` names `therealshakil/calm` + links the governing files; rules never restated) and overrides
 identity (own skate-zine palette → **no `tokens.css` copy at all**). Yet its git log shows updates pulled
