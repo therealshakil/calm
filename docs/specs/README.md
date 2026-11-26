@@ -52,9 +52,9 @@ plus the **spec-drops** that aren't tied to any one tool. Format + flow:
   with a verify-queue; advisory, the person locks; operationalises the research-method + Build Gate
   (suite-wide). *Locked (co-authored).*
 - **Skill hygiene & the skill Check** → [`./012-skill-hygiene.md`](./012-skill-hygiene.md) — a four-line
-  Check every calm skill passes (one job, lean body, routing-rule description, portable & honest) + a
+  Check every calm skill passes (one job, lean body, routing rule or call-only, portable & honest) + a
   read-only hygiene glance over the whole set; applies the Constitution-Check pattern to skills, no grader
-  service (suite-wide). *Draft — to lock.*
+  service (suite-wide). *Locked (co-authored); in force.*
 - **calm-check** → [`./013-calm-check.md`](./013-calm-check.md) — a scaffold so the canon is the obvious
   thing to copy, and a four-rule stdlib checker on `PostToolUse` that holds the token vocabulary and talks
   to the model rather than the person; the voice and the hand-made test stay judgement (suite-wide).

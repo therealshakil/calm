@@ -1,7 +1,7 @@
 # Spec — Skill hygiene & the skill Check
 <!-- filename: 012-skill-hygiene.md — numbered per collection, in introduction order -->
 
-**Status:** draft — to lock · **Date:** 2026-07-14, redrafted 2026-11-26 · **Scope:** calm and `calm-*` repos
+**Status:** locked — co-authored with the maintainer (2026-11-26: "y"); in force · **Date:** 2026-07-14, redrafted 2026-11-26 · **Scope:** calm and `calm-*` repos
 
 A four-line Check every calm skill passes, plus a read-only hygiene glance over the set,
 so skills stay one-job, lean, and cheap to carry.
@@ -94,7 +94,7 @@ description characters: cheap, stdlib, and good enough to rank five skills.
 
 Build: nothing to change today. Every current skill passes the Check, and none qualifies for call-only (R3).
 
-## Decided (proposed, to lock)
+## Decided (at lock)
 
 - **The glance stays manual** until the set is large enough to need a tool.
 - **Characters, not tokens.** It's a ranking, not a bill.
@@ -102,7 +102,7 @@ Build: nothing to change today. Every current skill passes the Check, and none q
 
 ## Tasks
 
-Filled at build time (after lock); each cites its requirement.
+- [x] First hygiene glance over the set (R4): all five pass; none qualifies for call-only (R3). Table above.
 
 ## Constitution Check
 
