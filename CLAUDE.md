@@ -61,6 +61,11 @@ memory and a private notes repo. Don't bring it here.
   yeses. Full dev-surface set: [`docs/specs/007-cli-conventions.md`](docs/specs/007-cli-conventions.md).
 - **Always autopush — the remote never lags local.** Pushing is part of committing, not a separate yes:
   after every commit, `git -C <repo> push` immediately. Never ask "shall I push?" — just do it.
+- **calm is public — land changes by the Build Gate.** Two-way doors go straight to `main`. One-way doors
+  (the Constitution, a new skill or tool, anything adopters inherit) go on a branch and merge into `main`
+  only when the person locks them; delete the branch once merged. The privacy guard checks every push
+  for private words and stops it if it finds one — fix the commit, then push. Full:
+  [`docs/specs/014-calm-in-the-open.md`](docs/specs/014-calm-in-the-open.md).
 - **Promote upstream, mid-flow.** Spot a pattern calm itself should carry while in a downstream/adopter
   repo? Author it *up*, don't copy it down. Commit the downstream WIP (a safe stop), cross to the local calm
   repo under *calm's* register (this file + Constitution + Build Gate), co-author the spec, the person locks,

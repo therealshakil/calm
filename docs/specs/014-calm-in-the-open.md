@@ -1,7 +1,8 @@
 # Spec — calm in the open
 <!-- filename: 014-calm-in-the-open.md -->
 
-**Status:** draft — to lock · **Date:** 2026-11-26 · **Scope:** suite-wide (calm itself)
+**Status:** locked — co-authored with Shakil (2026-11-26: "build it", "go with the rec", issues on with no
+promises); built · **Date:** 2026-11-26 · **Scope:** suite-wide (calm itself)
 
 How calm is developed now that it's a public repo: what guards a push, how changes land, and how other
 people can reach it.
@@ -41,8 +42,8 @@ It becomes a public issue only when it's free of that.
 
 ## Requirements
 
-- **R1 (Event).** WHEN a `git push` is run in calm, the guard shall check every outgoing commit's diff
-  and message against the private term list.
+- **R1 (Event).** WHEN a `git push` is run from a public repo, the guard shall check every outgoing
+  commit's added lines and message against the private term list.
 - **R2 (Unwanted).** IF any term matches, THEN the guard shall stop the push and tell the model the file
   or commit, the line, and the term, in one plain note.
 - **R3 (Ubiquitous).** The term list shall live outside calm (in the private notes repo) and never be
@@ -78,9 +79,11 @@ Related: Amendment 4 (calm tooling — silent, frugal, a `command` hook over an 
 ## How (the plan)
 
 - **The guard:** `scripts/privacy-guard.py`, stdlib only, run by a Claude Code `PreToolUse` hook on Bash
-  commands that are a `git push` in calm (checked-in `.claude/settings.json`). It reads the term list
-  from `~/Projects/calm-private/privacy-terms.txt` (one term per line; `#` comments), diffs
-  `@{upstream}..HEAD` (or all of `HEAD` for a new branch), and exits 2 with the note on a match.
+  in the maintainer's **global** `~/.claude/settings.json` — sessions rarely start inside calm, and a
+  push from any public repo can leak, so it covers them all (private repos are skipped by asking GitHub
+  for the visibility; unknown counts as public). It reads the term list from
+  `~/Projects/calm-private/privacy-terms.txt` (one term per line, word edges, `#` comments), checks every
+  commit not yet on a remote (`--branches --not --remotes`), and exits 2 with the note on a match.
   Any internal error exits 0 — except a match, which always blocks.
 - **The landing rule:** written into calm's `CLAUDE.md` beside "always autopush".
 - **Others:** `CONTRIBUTING.md` (a few lines) and `.github/ISSUE_TEMPLATE/note.md`.
@@ -89,14 +92,18 @@ Related: Amendment 4 (calm tooling — silent, frugal, a `command` hook over an 
 
 ## Open questions
 
-- **The term list itself.** The assistant drafts it from what the go-public scrub removed; the person
-  reads and approves it before the guard is switched on.
-- **Watch setting.** "Participating and @mentions", or "Ignore" with a glance when you choose.
+- **The term list itself.** Drafted from what the go-public scrub removed (31 terms); every public repo's
+  full history checks clean against it. The person reviews and edits it freely.
+- **Watch setting.** Set to "participating and @mentions" (quietest that still hears a direct reply);
+  "Ignore" is one click away.
 
 ## Tasks
 
-Filled at build time, after lock. Order: the term list (R3) → the guard (R1, R2, R4, R5) and its hook →
-CONTRIBUTING + template (R8) → the landing rule in CLAUDE.md (R6, R7) → spec 008 (R9).
+- [x] The term list, private (R3); checked against every public repo's history.
+- [x] The guard and its global hook (R1, R2, R4, R5); tested clean, blocking, and silent without a list.
+- [x] `CONTRIBUTING.md` + `.github/ISSUE_TEMPLATE/note.md` (R8); watch set to participating.
+- [x] The landing rule in `CLAUDE.md`; merged branches deleted (R6, R7).
+- [x] Spec 008's report-drop goes to the private inbox first (R9).
 
 ## Constitution Check
 
