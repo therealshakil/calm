@@ -10,6 +10,32 @@ landed in. If something was reasoned rather than sourced, say so honestly and ma
 
 ---
 
+## 2026-11-26 · Adversarial Review — a critic that yields to confidence is no critic
+
+**Q:** The scout's W48 pick: what does structured reviewer/critic disagreement teach calm's council and steward?
+**Found:** Qiu & Gill (arXiv 2608.18167, Aug 2026, ICML DL4C workshop). Three roles: the main agent alone
+edits; a reviewer reviews the frozen artifact; a fresh critic audits the review. Rule from the abstract:
+disagreement must be "minimal, structured, and evidence-grounded." The best variant gives the critic three
+verdicts (agree; disagree with cited code; disagree as a concern), and a concern must be settled by citing
+code either way. Results: LiveCodeBench 87% vs 77% zero-shot; best F1 on SWE-PRBench (0.533); SWE-bench
+Verified 75.2% vs 71.6%, at about 4.5x the tokens. Named failures: reviewers that "tend to agree with each
+other" and "do not always find the truth" (a confident rebuttal flipped the critic and dropped a real bug);
+speculative flags padding the review (3 of 5 comments fabricated in one case); a speculative concern
+causing an over-edit. "False consensus is a reliability failure." Not tested: model diversity (every role
+ran on one model), and "only when unsure / high-risk", which is proposed, not measured. Part of the paper
+was read via summary (the HTML fetch was truncated); the numbers above are as reported.
+**Alignment:** only the author edits, reviewers read a frozen target (the steward is report-only); a clean
+first pass ends at once (the steward's one quiet line); cost argues for spending review only where it
+matters (the council for one-way doors, the steward at lock and merge).
+**Learning:** confidence must not move a finding; only evidence does. Today a steward finding can be
+dismissed by the author's reasoning, and a council persona can change its view in cross-review because
+another sounded surer. calm's bet on model diversity is unsupported here either way; keep it, mark to verify.
+**Proposed (to decide):** (a) steward: the author may set a finding aside only by citing the line that
+refutes it; otherwise it stands in the report. (b) council: in cross-review, a persona changes position
+only on cited evidence, and says which. (c) steward: a slippage needs a cited line too, so speculation
+can't pad a report.
+**Sources:** [arXiv 2608.18167](https://arxiv.org/abs/2608.18167) (abstract and HTML, read 2026-11-26).
+
 ## 2026-11-26 · Spec Kit, five months on — converge grew into the steward's shape
 
 **Q:** What's new in Spec Kit since the July look, where does it align with or drift from calm, and what's
