@@ -39,8 +39,8 @@ The four-line Check, run by someone who didn't write the work. Governed by
    > anything. Bash hygiene: one op per command, literal absolute paths, `git -C`, no `cd`, chaining,
    > substitution or `$var`.
 
-4. Relay the report as it comes back, in calm's voice. Don't soften a breakage into a slippage, and don't
-   add findings of your own.
+4. Relay the report verbatim. Don't pad a clean result, soften a breakage into a slippage, or add findings
+   of your own. You may say afterwards, separately, where you'd disagree; the person decides.
 
 ## The report
 

@@ -86,7 +86,9 @@ The report is shown, the person decides. A finding never stops a lock or a merge
 
 ## How (the plan)
 
-A skill at `.claude/skills/constitution-steward/SKILL.md`. Not named `steward`: Claude Code already
+A skill at `.claude/skills/constitution-steward/SKILL.md`. It's dev-surface tooling for building calm,
+like calm-council (spec 011), not an app or tool on the suite's roster, so the roster's entry gate and an
+Amendment don't apply. Not named `steward`: Claude Code already
 ships a `/steward` skill for watching PRs, and two of the same name would misroute.
 
 The skill tells the assistant to spawn one subagent (R2) with the target, `CONSTITUTION.md`, and any app's
@@ -103,7 +105,9 @@ run the steward before a lock and before a one-way merge (R7).
 
 - [x] The skill, `.claude/skills/constitution-steward/SKILL.md` (R1–R6, R8).
 - [x] One line in `CLAUDE.md` "How we work": run it before a lock and a one-way merge (R7).
-- [x] First run: on this spec's own branch, before it merged (R7).
+- [x] First run: on this spec's own branch, before it merged (R7). Sonnet, 2026-11-26: four findings, no
+  breakages. Fixed the unrecorded run, the entry-gate silence and "relay in calm's voice"; kept the
+  scout-seed note as declared housekeeping, the person's call.
 
 ## Constitution Check
 
