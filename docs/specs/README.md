@@ -22,6 +22,9 @@ plus the **spec-drops** that aren't tied to any one tool. Format + flow:
   *Locked (co-authored).*
 - **Research flow** → [`./003-research-flow.md`](./003-research-flow.md) — research as a product; the frugal,
   ND-safe & calm research methodology + escalation rule (suite-wide). *Locked (co-authored).*
+- **calm in the open** → [`./014-calm-in-the-open.md`](./014-calm-in-the-open.md) — developing calm as a
+  public repo: a privacy guard on every push, changes land by the Build Gate, issues on with no promises,
+  report-drops private first (suite-wide). *Locked (co-authored); built.*
 - **Idea-space upkeep** → [`./005-idea-space-upkeep.md`](./005-idea-space-upkeep.md) — keeping `Calm.md` current:
   inline status-tracks-reality + a calm reconciliation pass; graduates the *Idea prune* seed (suite-wide).
   *Locked (co-authored).*

@@ -101,7 +101,7 @@ The suite's shape is governed as strictly as the Articles.
   apply equally to both.
 - **Organic, never ideated.** A calm tool exists only because a real, felt need demanded it. We do **not**
   pitch, brainstorm or generate new ideas for the suite — idea-generation is itself the bloat the suite
-  resists. Stray ideas wait, unjudged, in the idea-space (`Calm.md`), plucked only when a need is
+  resists. Stray ideas wait, unjudged, in the idea-space (`Calm.md`, kept private), plucked only when a need is
   genuinely lived.
 - **The entry gate — all four required.** A candidate joins only if: (1) it answers a **real, lived need**
   shown over actual use, not ideated; (2) it can honour **every Article**; (3) it **replaces something

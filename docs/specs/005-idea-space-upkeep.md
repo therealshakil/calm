@@ -2,7 +2,10 @@
 
 **Status:** locked — co-authored with Shakil · **Date:** 2026-06-25 · **Scope:** suite-wide
 
-A calm way to keep [`Calm.md`](../../Calm.md) honest: a card's status tracks reality, shipped ideas
+> **Note 2026-11-26.** Since calm went public, `Calm.md` lives in the maintainer's private notes repo, not
+> here. The upkeep below still applies to it, wherever it's kept.
+
+A calm way to keep `Calm.md` honest: a card's status tracks reality, shipped ideas
 become pointers, and seeds that no longer earn their place are gently pruned — without the board ever
 becoming a chore or a nag.
 

@@ -2,7 +2,7 @@
 
 For anyone — human or LLM — working in this repo. This is the calm suite; work it the calm way.
 Governing law: [`CONSTITUTION.md`](./CONSTITUTION.md) (read it). `identity.md` = the look,
-`research-method.md` = how we research, `Calm.md` = the idea-space. This file is how to *be* while you
+`research-method.md` = how we research, `Calm.md` = the idea-space, kept private (outside this public repo). This file is how to *be* while you
 build — keep it lean and accurate; prune drift.
 
 If you're an assistant: let this set your register. Slow down. Be chill.
@@ -53,7 +53,7 @@ memory and a private notes repo. Don't bring it here.
 - On longer tasks, give periodic **progress + a rough ETA**; don't go silent until the end.
 - **Minimise tokens and over-production** — capture durable things in files, keep chat lean.
 - **Idea-drops and spec-drops don't interrupt:** a background agent captures/parks them (and any quick
-  research) while the main thread acks in one line and stays on task. (idea → `Calm.md`, or a personal one → the private notes repo; rough spec →
+  research) while the main thread acks in one line and stays on task. (idea → `Calm.md` in the private notes repo, never this public one; rough spec →
   `apps/<app>/docs/specs/spec-ideas.md`.)
 - **Mechanics:** absolute paths and tool dir-flags (`git -C`, `-p`), never `cd`; one operation per
   command. No command substitution, shell variables, or chained commands — the CLI can't statically
@@ -61,6 +61,11 @@ memory and a private notes repo. Don't bring it here.
   yeses. Full dev-surface set: [`docs/specs/007-cli-conventions.md`](docs/specs/007-cli-conventions.md).
 - **Always autopush — the remote never lags local.** Pushing is part of committing, not a separate yes:
   after every commit, `git -C <repo> push` immediately. Never ask "shall I push?" — just do it.
+- **calm is public — land changes by the Build Gate.** Two-way doors go straight to `main`. One-way doors
+  (the Constitution, a new skill or tool, anything adopters inherit) go on a branch and merge into `main`
+  only when the person locks them; delete the branch once merged. The privacy guard checks every push
+  for private words and stops it if it finds one — fix the commit, then push. Full:
+  [`docs/specs/014-calm-in-the-open.md`](docs/specs/014-calm-in-the-open.md).
 - **Promote upstream, mid-flow.** Spot a pattern calm itself should carry while in a downstream/adopter
   repo? Author it *up*, don't copy it down. Commit the downstream WIP (a safe stop), cross to the local calm
   repo under *calm's* register (this file + Constitution + Build Gate), co-author the spec, the person locks,

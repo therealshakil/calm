@@ -11,7 +11,7 @@ As the suite grows I'll ship calm products again and again, so releasing has to 
 low-effort** — the same shape every time, mostly itself. The point of it is a **simple, calm README**:
 someone glancing should see at once *what's ready to use* and *what it looks like*. **Screenshots carry
 that** — software always used to have them, and a screenshot is calm: a picture lands quieter and faster
-than a paragraph (see the *screenshots-are-calm* seed in [`../../Calm.md`](../../Calm.md)). The release flow
+than a paragraph (see the *screenshots-are-calm* seed in `Calm.md`, the private idea-space). The release flow
 keeps that front door consistent and current, without it becoming a chore. Serves **Article I** (glanceable),
 **IX** (small, low-effort), and the ND show-don't-tell register.
 
@@ -42,7 +42,7 @@ These parts are equal partners:
 ## Research
 - [*Release flow → a reproducible calm skill*](../research.md#2026-06-23--release-flow--a-reproducible-calm-skill-reasoned--medium-bar) (2026-06-23) — form: a Claude Code skill
 - [*Screenshot capture → native `screencapture` of the real window + composite*](../research.md#2026-06-24--screenshot-capture--native-screencapture-of-the-real-window--composite) (2026-06-24)
-- *screenshots-are-calm* seed ([`../../Calm.md`](../../Calm.md)); the glanceable / show-don't-tell principle
+- *screenshots-are-calm* seed (`Calm.md`, the private idea-space); the glanceable / show-don't-tell principle
 
 ## How (the plan)
 
@@ -55,7 +55,7 @@ The terminal path is macOS-native (`screencapture` + AppleScript).
 A scene is the content a screenshot renders — for a web app, a Playwright fixture (route + state).
 For the **terminal theme**, the scene will be a **"welcome to calm" launch banner** — the calm wordmark/message
 shown when Claude opens (the *calm-mode-announces-itself-on-launch* + *calm ASCII art* seeds in
-[`../../Calm.md`](../../Calm.md)). That's the perfect, on-identity shot — so the terminal scene **depends on the
+`Calm.md`, the private idea-space). That's the perfect, on-identity shot — so the terminal scene **depends on the
 ASCII work and is parked until it exists.** Capture is via `screencapture` of the real window (below).
 
 The skill runs, in order:
