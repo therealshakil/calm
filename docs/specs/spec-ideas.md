@@ -7,6 +7,9 @@ its research. Promote via the normal flow; Constitution-level changes go through
 
 ## Constitution steward — keeps calm true to its Constitution (catches breakage + slippage)
 
+**Promoted (2026-11-26):** now spec [`015-constitution-steward.md`](./015-constitution-steward.md), locked and built.
+The seed below is kept for its history.
+
 **Idea-drop (2026-07-05):** an agent that runs the **Constitution Check** *for real* — auditing work against
 the Constitution to catch **breakages** (a clear Article violation) and **slippages** (quiet drift toward
 one). The Check exists per spec/PR today, but it's author-run and honesty-dependent, so violations still
@@ -46,6 +49,9 @@ spec. Building trips the Build Gate (new enforcing surface the suite inherits). 
 ---
 
 ## ai-scout v2 — learnings reflected back as PRs (shape approved)
+
+**Moved (2026-11-26):** the scout now lives in [calm-research](https://github.com/therealshakil/calm-research)
+(spec 001 + Amendment 1, locked; built). It runs weekly in the cloud. The seed below is kept for its history.
 
 **Idea-drop (2026-07-05, shape approved by Shakil):** grow [ai-scout](../../.claude/skills/ai-scout/SKILL.md)
 from *a digest he reads* to *learnings folded back into calm*. Same scanner + lens; a new output: when a

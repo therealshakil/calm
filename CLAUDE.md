@@ -50,6 +50,10 @@ memory and a private notes repo. Don't bring it here.
   on different models to debate it, ground their claims, and hand back a synthesis + verify-queue. Advisory
   — the person locks; skip it for two-way doors. (`council this` / `debate this`.) Full:
   [`docs/specs/011-calm-council.md`](docs/specs/011-calm-council.md).
+- **The Constitution steward — a second pair of eyes on the Check.** Just before the person locks a spec,
+  and just before a one-way branch merges into `main`, run the `constitution-steward` skill unasked and show
+  its report. Report-only; the person decides. Full:
+  [`docs/specs/015-constitution-steward.md`](docs/specs/015-constitution-steward.md).
 - On longer tasks, give periodic **progress + a rough ETA**; don't go silent until the end.
 - **Minimise tokens and over-production** — capture durable things in files, keep chat lean.
 - **Idea-drops and spec-drops don't interrupt:** a background agent captures/parks them (and any quick

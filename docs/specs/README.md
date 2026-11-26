@@ -25,6 +25,9 @@ plus the **spec-drops** that aren't tied to any one tool. Format + flow:
 - **calm in the open** → [`./014-calm-in-the-open.md`](./014-calm-in-the-open.md) — developing calm as a
   public repo: a privacy guard on every push, changes land by the Build Gate, issues on with no promises,
   report-drops private first (suite-wide). *Locked (co-authored); built.*
+- **Constitution steward** → [`./015-constitution-steward.md`](./015-constitution-steward.md) — the Check, run
+  by a second pair of eyes: typed findings, report-only, quiet when clean; runs before a lock and a one-way
+  merge (suite-wide). *Locked (co-authored); built.*
 - **Idea-space upkeep** → [`./005-idea-space-upkeep.md`](./005-idea-space-upkeep.md) — keeping `Calm.md` current:
   inline status-tracks-reality + a calm reconciliation pass; graduates the *Idea prune* seed (suite-wide).
   *Locked (co-authored).*
