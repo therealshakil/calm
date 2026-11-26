@@ -27,8 +27,8 @@ Advances Article I (finite, glanceable), VIII and IX (subtract; stays small), vi
 | calm-ds | 612 chars | 109 lines | the model, unasked |
 | calm-council | 558 | 101 | the person, in plain words |
 | constitution-steward | 442 | 57 | the model, unasked (spec 015) |
-| ai-scout (calm-research) | 338 | 119 | a scheduled run |
-| drift | 257 | 50 | the person, explicitly |
+| ai-scout (calm-research) | 338 | 119 | a scheduled run, or the person in plain words |
+| drift | 257 | 50 | the person, in plain words |
 
 ## What it does
 
@@ -51,13 +51,11 @@ On request, a **hygiene glance** reports on the whole set. It recommends; it nev
 4. **Portable & honest.** Conforms to the `SKILL.md` open standard; recommends, never executes without
    confirmation.
 
-**Call-only, applied to today's set.** Only **drift**. It's rare, and the person always starts it on
-purpose.
-The rest stay model-invoked, each for a reason. calm-ds and the steward have to run unasked.
-calm-council is started in plain words ("council this"); call-only would make the person type a slash
-command instead, which goes against loose-human / strict-machine.
-ai-scout runs from a scheduled prompt that reads its file directly, so call-only changes nothing for it,
-and it's left as is.
+**Call-only, applied to today's set: none.** calm-ds and the steward have to run unasked.
+calm-council, drift and ai-scout are started in plain words ("council this", "make me a calm banner",
+"run the scout"); call-only would make the person type a slash command instead, which goes against
+loose-human / strict-machine. The rule is here for the next skill that only the person starts on purpose.
+(The steward's first review of this draft caught that an earlier version made drift call-only, against R3.)
 
 ## Requirements
 
@@ -94,7 +92,7 @@ The Check is this document. The glance is a manual pass: the assistant reads eac
 and body in `calm/.claude/skills` and any `calm-*` repo, and reports per R4. Startup cost is measured in
 description characters: cheap, stdlib, and good enough to rank five skills.
 
-Build: add `disable-model-invocation: true` to drift's frontmatter (R3). Nothing else changes.
+Build: nothing to change today. Every current skill passes the Check, and none qualifies for call-only (R3).
 
 ## Decided (proposed, to lock)
 
@@ -110,5 +108,6 @@ Filled at build time (after lock); each cites its requirement.
 
 1. **Serves:** I (finite, glanceable), VIII and IX (subtract, small).
 2. **Violates:** none. Read-only, no score, no new dependency or tool.
-3. **Subtracts:** drift's description from every session start; refuses a grader, a CI gate and a built tool.
-4. **Calm:** the clean state is one line; an unreadable skill is named, never guessed at.
+3. **Subtracts:** future startup cost, by making call-only the rule for skills only the person starts;
+   refuses a grader, a CI gate and a built tool.
+4. **Calm:** the clean state is one line; an unreadable skill is named, never guessed at; no motion surface.
