@@ -17,6 +17,8 @@ Canonical sources, all in the calm repo (`~/.claude/calm-live` when installed):
 | The words | `docs/calm-language.md` |
 | Tokens | `tokens.css` |
 | Fonts, base64 | `calm-fonts.css` |
+| Start here | `assets/scaffold/starter.html` |
+| Held by a machine | `scripts/calm-check.py` (spec: `docs/specs/013-calm-check.md`) |
 | Governing law | `CONSTITUTION.md` (Articles VI, IX, XI) |
 
 Read `identity.md` before any substantial visual work. What follows is the part you must not get wrong
@@ -86,6 +88,16 @@ Own the whole look in calm's own tokens and CSS. No styled component library, it
 else's aesthetic. Rent only interaction and accessibility, via a headless primitive, and only when a real
 component needs it. Keep specs target-neutral: tokens plus plain-language behaviour contracts, not
 framework code.
+
+Start from `assets/scaffold/starter.html` rather than from memory. It carries only the parts with one
+correct answer — tokens, the four faces in their jobs, both themes, reduced-motion, the splice line — and
+no composition at all, so there is nothing templated to inherit. The body is empty on purpose.
+
+`scripts/calm-check.py` holds the deterministic half: a colour literal where `var()` belongs, a token
+named anything other than `--calm-*`, a `--calm-*` value that has drifted from `tokens.css`, a dark
+selector that isn't `[data-theme="dark"]`. It runs on write and talks to the model, not to the person.
+There is no way to suppress it — if a rule is wrong, the rule comes out of the spec. Everything above this
+line, the voice and the hand-made test, is judgement and stays yours.
 
 ---
 Canonical here in the calm repo. Reachable from every project via `~/.claude/skills/calm-ds`, a symlink

@@ -1,0 +1,61 @@
+<!-- calm scaffold — the plumbing, and nothing else.
+
+     Everything in this file has exactly one correct answer, so copying it
+     templates nothing you can see. Everything with more than one right answer
+     (layout, spacing beyond the tokens, components, any content) is deliberately
+     absent. Composition is where the templated look lives, so there is none here.
+
+     Copy it, splice the canon in, then make the page by hand.
+
+     For an artifact or any single self-contained page, the CSP blocks font CDNs,
+     so splice the real faces and tokens in as one file:
+
+       cat p1.html calm-fonts.css tokens.css p2.html > page.html
+
+     where p1 ends with <style> and p2 begins with the rules below. For an app
+     surface, link or import tokens.css instead and load the faces yourself.
+
+     Canon: tokens.css · docs/identity.md · docs/calm-language.md
+     Checked by: scripts/calm-check.py
+-->
+<title>Untitled</title>
+<style>
+/* ---- splice calm-fonts.css and tokens.css here ------------------------------
+   Nothing below hard-codes a colour or a face. Both themes come from tokens.css,
+   which defines light on bare :root, dark under prefers-color-scheme with a
+   :root:not([data-theme="light"]) guard, and dark again under [data-theme="dark"]
+   so an explicit choice wins in both directions.
+   -------------------------------------------------------------------------- */
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--calm-bg);
+  color: var(--calm-fg);
+  font-family: var(--calm-font-body);
+  line-height: 1.7;
+  margin: 0;
+}
+
+::selection { background: var(--calm-sel); }
+
+/* the four faces, each with one job. Body is already set above.
+   Yrsa for headlines and leads, Shantell for the hand — short, large, low-stakes
+   only — IBM Plex Mono for code, terminal, eyebrows and labels. */
+
+h1, h2, h3 { font-family: var(--calm-font-serif); font-weight: 600; }
+code, pre, kbd { font-family: var(--calm-font-mono); }
+
+/* Motion is almost none, and reduced-motion is honoured rather than bolted on:
+   nothing moves unless the person has not asked for stillness. */
+
+@media (prefers-reduced-motion: no-preference) {
+  a { transition: color 240ms ease; }
+}
+
+/* Wide things scroll inside their own box; the page body never scrolls sideways. */
+
+.scroll { overflow-x: auto; }
+</style>
+
+<!-- everything below is made by hand -->
