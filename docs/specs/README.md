@@ -55,7 +55,7 @@ plus the **spec-drops** that aren't tied to any one tool. Format + flow:
 - **calm-check** → [`./013-calm-check.md`](./013-calm-check.md) — a scaffold so the canon is the obvious
   thing to copy, and a four-rule stdlib checker on `PostToolUse` that holds the token vocabulary and talks
   to the model rather than the person; the voice and the hand-made test stay judgement (suite-wide).
-  *Draft — to lock.*
+  *Locked (co-authored); built.*
 - **Margin** (app) → [`../../apps/margin/docs/specs/`](../../apps/margin/docs/specs/) — specs 001–005.
 
 ## Parked

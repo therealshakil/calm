@@ -1,8 +1,8 @@
 # 013 — calm-check: the tokens, held by a machine
 
-> **Status: drafted 2026-08-22, implemented on Shakil's go-ahead.** Mark it locked when you're happy with
-> it; until then it's a proposal that happens to run. Council debate and the measurement behind it are
-> summarised in §2.
+> **Status: locked 2026-11-26 — co-authored with Shakil; built.** Drafted 2026-08-22 and run since on his
+> go-ahead; the one open decision (§6) settled and the mockups brought in line before the lock. The
+> measurement behind it is summarised in §2.
 
 Two artefacts, in this order: a **scaffold** so the canon is the obvious thing to copy, and a **checker**
 so what slips past it gets caught while the model is still holding the file. Neither speaks to the person.
@@ -80,6 +80,10 @@ keeps `&#10003;` out of the results. `tokens.css` and `calm-fonts.css` are skipp
 removing it is a visible diff. On a violation it exits 2, which shows stderr to the model and lets it fix
 the file in the same turn (verified against the hooks documentation; a `PostToolUse` hook cannot block,
 because the write already happened).
+
+**Scope, on purpose:** a project hook loads only in a Claude Code session started inside calm, so that's
+where it runs. It is deliberately not wired machine-wide: under Amendment 7, projects built on calm keep
+their own look and tokens, and a global checker would nag them for it.
 
 - **It addresses the model, never the person.** A mistake is absorbed, not announced (Article IV). This is
   loose human, strict machine: the strict, tiring part belongs to the assistant.
