@@ -31,14 +31,16 @@ Two modes — pick by whether you want to leave the downstream thread.
 5. **Resume** the downstream work where you left off.
 
 **Fallback — report-drop (no context-switch):** if you'd rather not leave the thread, the agent drafts **one**
-calm report (what broke / which inherited file / a suggested fix or inline patch) and — on your approval —
-files it as a `gh issue` on `therealshakil/calm` (or a local `inbox`). You triage and apply it in calm later.
+calm report (what broke / which inherited file / a suggested fix or inline patch) and writes it to the
+private inbox (`inbox.md` in the private notes repo). You triage and apply it in calm later. It becomes a
+public `gh issue` on `therealshakil/calm` only on your say, once it holds no private detail from the
+downstream project (spec 014, R9).
 
 ## Not this (non-goals)
 
 - **No PR / fork ceremony.** Single-user; authoring in the true source replaces the PR.
-- **No external contributors** (deferred — calm is private & single-user, Article X). Revisit only if calm
-  ever opens up.
+- **No external contributors here.** This spec is the maintainer's own loop. calm opened up on 2026-11-26;
+  how others reach it (issues on, no promises) is [`014-calm-in-the-open.md`](./014-calm-in-the-open.md).
 - **Never skips calm's governance.** The upstream change still runs Build Gate → co-author → lock → Check.
 - **Never auto-files or auto-merges** (Article VII) — the agent recommends; you approve the send and the lock.
 - Not a noisy channel — one report, never a stream.
