@@ -10,6 +10,38 @@ landed in. If something was reasoned rather than sourced, say so honestly and ma
 
 ---
 
+## 2026-11-26 · Spec Kit, five months on — converge grew into the steward's shape
+
+**Q:** What's new in Spec Kit since the July look, where does it align with or drift from calm, and what's
+worth bringing back?
+**Found:** About 70 releases since 6 July (0.12.5 → 1.4.5), with 1.0.0 on 21 Aug. Four things matter.
+(1) **converge is now fully specified**: spec, plan and tasks are the sole source of intent; findings are
+typed `missing / partial / contradicts / unrequested`; it only appends tasks, never edits code or the spec;
+on a clean result it leaves the file byte-for-byte untouched and says so in a line; "completion claims are
+not evidence". (2) **The core is subtracting**: `taskstoissues` was deprecated in 1.1 and removed from core
+in 1.3 (moved to an extension), and Copilot now installs skills by default (0.16). (3) **Call-only skills**:
+`--no-model-invocation` for Claude Code and Copilot (1.2, 1.3), so heavy commands load only when asked
+for. (4) **Spec persistence** (#4945): three models, none the default; implementation discoveries are
+"evidence for team decisions, not a replacement source of intent". Around that, the platform keeps
+growing: a workflow engine with a Lark grammar and custom functions, a built-in GitHub step, mandatory
+hooks, reasoning-effort mapping, and a catalog of governance presets (Security, A11Y, Architecture,
+Autonomous Run, Closed Vocabulary Check, T-Shirt Sizing Gate). The 1.0.0 notes argue semver's promise
+"stopped mattering" because an agent adapts to a breaking change in a sentence.
+**Alignment:** persistence #4945 is calm's living-spec stance (`calm-spec-loop.md`) and Amendment 3 in other
+words. The T-Shirt Sizing Gate and Closed Vocabulary Check are the Build Gate and calm-check, arrived at
+independently. Moving `taskstoissues` out of core is the Subtraction Ladder.
+**Drift (theirs from calm):** governance as installable presets, where calm keeps one Constitution; and
+the 1.0.0 stance. calm's `main` is a release channel that adopters follow live (spec 014), so calm can't
+lean on "your agent will follow it"; a change that moves under someone still costs attention.
+**Proposed (to decide):** (a) promote the parked Constitution steward (`spec-ideas.md`) using converge's
+shape: the four typed gaps (`unrequested` is the Subtraction Ladder's finding), report-only, quiet on a
+clean result, Article-traced. It's a new tool, so a spec and the Build Gate apply. (b) Mark calm's heavy,
+rarely-used skills call-only (`disable-model-invocation`), folded into spec 012, which is still a draft.
+**Sources:** [github/spec-kit releases](https://github.com/github/spec-kit/releases) (0.13.0–1.4.5, read
+2026-11-26) · [`converge.md`](https://github.com/github/spec-kit/blob/main/templates/commands/converge.md) ·
+[#4945 spec persistence](https://github.com/github/spec-kit/pull/4945) ·
+[1.0.0 notes](https://github.com/github/spec-kit/releases/tag/v1.0.0).
+
 ## 2026-07-06 · The Constitution governs calm itself — adopters aren't bound (scope clarification)
 
 **Q:** Does the calm Constitution bind external *adopter* repos (e.g. Reverie) the way it binds the suite's
