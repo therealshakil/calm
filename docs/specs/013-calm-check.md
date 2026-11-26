@@ -92,12 +92,14 @@ because the write already happened).
   `~/.claude/calm-check/log.md`, outside the repo, glanceable when wanted.
 - **Any internal error exits 0.** A checker must never be the reason a session breaks.
 
-## 6. The one open decision
+## 6. The mockups — decided
 
-The four mockups will fail this the moment one is edited. That is correct, and the fix isn't automatic:
-either reconcile them to canon in one deliberate pass, or mark them pre-canon and leave them as the record
-of where the identity came from. Both are defensible. It's Shakil's call, and nothing needs it today —
-the checker only ever looks at what someone just touched.
+The four mockups would have failed this the moment one was edited. Shakil's call (2026-11-26): bring them
+in line. Done in one deliberate pass: each now imports `tokens.css` and `calm-fonts.css` instead of
+carrying its own vocabulary, uses the `--calm-*` names and the four faces in their jobs, and switches theme
+with `[data-theme]`. v2's serif/hand toggle became a `[data-face]` attribute with plain selector overrides.
+All four pass the checker; the pre-reconcile versions stay in git history as the record of where the
+identity came from.
 
 ## 7. Removing it
 

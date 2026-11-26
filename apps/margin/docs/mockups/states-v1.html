@@ -1,30 +1,17 @@
 <title>Margin — calm states (mockup)</title>
 <style>
-  :root {
-    --ground: #F7F4EC;
-    --ink: #26231E;
-    --ink-2: #6E6757;
-    --rule: rgba(38, 35, 30, 0.16);
-    --rule-strong: rgba(38, 35, 30, 0.42);
-    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Hoefler Text", Georgia, serif;
-    --hand: "Bradley Hand", "Chalkboard SE", "Marker Felt", "Comic Sans MS", cursive;
-    --body: "Avenir Next", system-ui, -apple-system, "Segoe UI", sans-serif;
-  }
-  html.dark {
-    --ground: #1B1814;
-    --ink: #E9E4D8;
-    --ink-2: #948D7E;
-    --rule: rgba(233, 228, 216, 0.15);
-    --rule-strong: rgba(233, 228, 216, 0.40);
-  }
+  /* Canon, imported rather than copied: tokens.css (colour + faces) and calm-fonts.css (the four faces).
+     Dark follows the OS, or is forced with [data-theme]. */
+  @import "../../../../calm-fonts.css";
+  @import "../../../../tokens.css";
 
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0;
-    background: var(--ground);
-    color: var(--ink);
-    font-family: var(--body);
+    background: var(--calm-bg);
+    color: var(--calm-fg);
+    font-family: var(--calm-font-body);
     line-height: 1.62;
     transition: background 320ms ease, color 320ms ease;
   }
@@ -35,19 +22,19 @@
     position: sticky; top: 0;
     display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;
     padding: 14px clamp(16px, 4vw, 40px);
-    background: var(--ground);
-    border-bottom: 1px solid var(--rule);
+    background: var(--calm-bg);
+    border-bottom: 1px solid var(--calm-line);
   }
   .states { display: flex; gap: 8px; flex-wrap: wrap; }
   .pill {
     font: inherit; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--ink-2); background: transparent;
-    border: 1px solid var(--rule); border-radius: 999px; padding: 6px 13px; cursor: pointer;
+    color: var(--calm-dim); background: transparent;
+    border: 1px solid var(--calm-line); border-radius: 999px; padding: 6px 13px; cursor: pointer;
     transition: border-color 180ms ease, color 180ms ease;
   }
-  .pill:hover { color: var(--ink); border-color: var(--rule-strong); }
-  .pill[aria-pressed="true"] { color: var(--ground); background: var(--ink); border-color: var(--ink); }
-  .pill:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+  .pill:hover { color: var(--calm-fg); border-color: var(--calm-dim); }
+  .pill[aria-pressed="true"] { color: var(--calm-bg); background: var(--calm-fg); border-color: var(--calm-fg); }
+  .pill:focus-visible { outline: 2px solid var(--calm-fg); outline-offset: 2px; }
 
   .page { max-width: 760px; margin: 0 auto; padding: 30px clamp(20px, 5vw, 56px) 80px; }
 
@@ -56,36 +43,36 @@
 
   /* ---- shared edition bits ---- */
   .masthead { text-align: center; padding: 22px 0 14px; }
-  .masthead h1 { font-family: var(--hand); font-weight: 700; font-size: clamp(44px, 11vw, 84px); line-height: 0.96; letter-spacing: 0.005em; margin: 0; }
-  .strap { margin-top: 12px; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-2); }
-  .rule-double { border: 0; border-top: 3px double var(--rule-strong); margin: 16px 0 0; }
-  .rule { border: 0; border-top: 1px solid var(--rule); margin: 28px 0; }
-  .label { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 10px; }
+  .masthead h1 { font-family: var(--calm-font-hand); font-weight: 700; font-size: clamp(44px, 11vw, 84px); line-height: 0.96; letter-spacing: 0.005em; margin: 0; }
+  .strap { margin-top: 12px; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--calm-dim); }
+  .rule-double { border: 0; border-top: 3px double var(--calm-dim); margin: 16px 0 0; }
+  .rule { border: 0; border-top: 1px solid var(--calm-line); margin: 28px 0; }
+  .label { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--calm-dim); margin: 0 0 10px; }
 
-  .note { font-family: var(--hand); font-size: clamp(19px, 2.8vw, 23px); line-height: 1.4; margin: 0; max-width: 44ch; }
+  .note { font-family: var(--calm-font-hand); font-size: clamp(19px, 2.8vw, 23px); line-height: 1.4; margin: 0; max-width: 44ch; }
 
-  .lead h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(27px, 5vw, 42px); line-height: 1.12; margin: 0; max-width: 18ch; }
+  .lead h2 { font-family: var(--calm-font-serif); font-weight: 500; font-size: clamp(27px, 5vw, 42px); line-height: 1.12; margin: 0; max-width: 18ch; }
   .lead .why { margin: 16px 0 0; max-width: 52ch; font-size: 17px; }
 
   .plate { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; }
   .plate .t { font-size: 17px; }
-  .plate .s { font-size: 14px; color: var(--ink-2); margin-top: 2px; }
+  .plate .s { font-size: 14px; color: var(--calm-dim); margin-top: 2px; }
 
-  .empty { font-size: 16px; color: var(--ink-2); max-width: 50ch; }
+  .empty { font-size: 16px; color: var(--calm-dim); max-width: 50ch; }
 
-  .sign { font-family: var(--hand); font-size: clamp(20px, 3.2vw, 24px); line-height: 1.35; margin: 0; }
+  .sign { font-family: var(--calm-font-hand); font-size: clamp(20px, 3.2vw, 24px); line-height: 1.35; margin: 0; }
   .end { text-align: center; padding-top: 6px; }
-  .bye { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-2); margin-top: 12px; }
+  .bye { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--calm-dim); margin-top: 12px; }
 
   /* ---- spare states (rest / stop) ---- */
   .spare { text-align: center; padding: clamp(48px, 12vh, 120px) 0; display: flex; flex-direction: column; align-items: center; gap: 26px; }
-  .spare .doodle { color: var(--ink); }
-  .spare h2 { font-family: var(--hand); font-weight: 700; font-size: clamp(26px, 5vw, 38px); line-height: 1.2; margin: 0; max-width: 20ch; }
-  .spare .body { font-family: var(--hand); font-size: clamp(19px, 3vw, 23px); line-height: 1.45; margin: 0; max-width: 30ch; }
-  .spare .fine { font-size: 13px; letter-spacing: 0.06em; color: var(--ink-2); max-width: 40ch; }
-  .spare .word { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-2); }
+  .spare .doodle { color: var(--calm-fg); }
+  .spare h2 { font-family: var(--calm-font-hand); font-weight: 700; font-size: clamp(26px, 5vw, 38px); line-height: 1.2; margin: 0; max-width: 20ch; }
+  .spare .body { font-family: var(--calm-font-hand); font-size: clamp(19px, 3vw, 23px); line-height: 1.45; margin: 0; max-width: 30ch; }
+  .spare .fine { font-size: 13px; letter-spacing: 0.06em; color: var(--calm-dim); max-width: 40ch; }
+  .spare .word { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--calm-dim); }
 
-  .colophon { max-width: 760px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 56px) 48px; font-size: 11px; letter-spacing: 0.04em; color: var(--ink-2); text-align: center; line-height: 1.7; }
+  .colophon { max-width: 760px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 56px) 48px; font-size: 11px; letter-spacing: 0.04em; color: var(--calm-dim); text-align: center; line-height: 1.7; }
 </style>
 
 <div class="bar">
@@ -189,16 +176,16 @@
 </div>
 
 <p class="colophon">
-  Mockup &middot; the sad paths the Constitution Check requires (Articles I&ndash;V) &middot; same identity, type stands in
+  Mockup &middot; the sad paths the Constitution Check requires (Articles I&ndash;V) &middot; set in the calm faces and tokens
 </p>
 
 <script>
   (function () {
     var root = document.documentElement;
     var theme = document.getElementById("theme");
-    function setTheme(d) { root.classList.toggle("dark", d); theme.textContent = d ? "Light" : "Dark"; }
+    function setTheme(d) { root.setAttribute("data-theme", d ? "dark" : "light"); theme.textContent = d ? "Light" : "Dark"; }
     setTheme(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
-    theme.addEventListener("click", function () { setTheme(!root.classList.contains("dark")); });
+    theme.addEventListener("click", function () { setTheme(root.getAttribute("data-theme") !== "dark"); });
 
     var pills = document.querySelectorAll(".pill[data-target]");
     function show(id) {
