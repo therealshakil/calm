@@ -40,7 +40,8 @@ For a one-way-door decision, convene a panel and synthesise:
 3. **Ground, don't assert.** Every persona cites a source or *flags* the claim for the verify-queue;
    confidence + source, never flat certainty.
 4. **Anonymised cross-review.** Each persona sees the others' takes with names stripped and says what it
-   would change — the argument, not the author.
+   would change — the argument, not the author. A persona moves only on cited evidence and names it;
+   confidence alone moves nothing (added 2026-11-26, from *Adversarial Review* in `research.md`).
 5. **Chair synthesis.** The Chair reads the debate (does not average votes) and returns the glanceable
    output: decision · where each lens landed · the real fault line · blind spots · recommendation with
    confidence · verify-queue · **you lock**.

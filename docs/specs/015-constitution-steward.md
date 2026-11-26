@@ -67,6 +67,11 @@ The report is shown, the person decides. A finding never stops a lock or a merge
 - **R7 (Event).** WHEN the person is about to lock a spec, or a one-way branch is about to merge into
   `main`, the assistant shall run the steward first and show the report.
 - **R8 (Ubiquitous).** The steward shall treat a spec's written Check as a claim to verify, not as evidence.
+- **R9 (Ubiquitous).** Every finding, slippage included, shall cite the line it rests on.
+- **R10 (Unwanted).** IF the author disagrees with a finding, THEN it shall be set aside only by citing the
+  line that refutes it; otherwise it stands in the report the person sees.
+
+R9 and R10 were added 2026-11-26, from *Adversarial Review* (`research.md`): confidence must not move a finding.
 
 ## Not this (non-goals)
 

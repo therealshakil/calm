@@ -60,7 +60,9 @@ A **Chair** (you, or the invoking model) synthesises — it does not vote.
    verify-queue. Confidence + source, never flat certainty. (This is what separates a calm council
    from a vibe one.)
 4. **Anonymised cross-review** — give each persona the *others' takes with the names stripped*, and
-   ask what they'd change. Anonymity keeps it about the argument, not the author.
+   ask what they'd change. Anonymity keeps it about the argument, not the author. A persona changes
+   its position only on cited evidence, and names the evidence that moved it; another take sounding
+   surer is not a reason. Holding a position against the room is allowed.
 5. **Chair synthesis** — the Chair does not average the votes; it reads the debate and hands back the
    output below.
 

@@ -33,7 +33,8 @@ The four-line Check, run by someone who didn't write the work. Governed by
    > pattern or Budget), **slippage** (leans toward a breach), **unrequested** (in the change but no spec
    > asked for it), **missing** (the spec promised it and it isn't there; a Check that's present but wrong
    > counts). Treat the spec's own written Check as a claim to verify, never as evidence. For each: the
-   > kind, the Article, the file and line, the smallest fix. Breakages first. At most a handful; merge
+   > kind, the Article, the file and line, the smallest fix. Every finding cites the line it rests on,
+   > slippage included; a hunch with no line isn't a finding. Breakages first. At most a handful; merge
    > duplicates. If nothing is found, reply only "Holds to the Constitution." If you can't read the target
    > or the Constitution, say which in one line and stop; never report clean by default. Don't edit
    > anything. Bash hygiene: one op per command, literal absolute paths, `git -C`, no `cd`, chaining,
@@ -41,6 +42,8 @@ The four-line Check, run by someone who didn't write the work. Governed by
 
 4. Relay the report verbatim. Don't pad a clean result, soften a breakage into a slippage, or add findings
    of your own. You may say afterwards, separately, where you'd disagree; the person decides.
+5. **Evidence, not confidence.** To set a finding aside, cite the line that refutes it. Without that line,
+   the finding stands in what the person sees, however sure the argument against it feels.
 
 ## The report
 
