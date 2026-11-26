@@ -10,6 +10,29 @@ landed in. If something was reasoned rather than sourced, say so honestly and ma
 
 ---
 
+## 2026-07-06 · The Constitution governs calm itself — adopters aren't bound (scope clarification)
+
+**Q:** Does the calm Constitution bind external *adopter* repos (e.g. Reverie) the way it binds the suite's
+own apps? Reverie's `CLAUDE.md` / charter currently say it "inherits" the Constitution and "the choice loses"
+on conflict.
+**Decided (owner — Shakil, 2026-07-06):** No. **The Constitution governs calm itself only.** An adopter takes
+calm as *register and inspiration*, aspirationally — not as binding law. Pushing the full Constitution onto an
+adopter is **off-putting and self-defeating**: it warps the adopter into contortions to obey rules never meant
+for it.
+**Lived trigger:** Reverie is a magazine that wants to be as calm as possible, but *media must live somewhere*.
+Treating images-only / no-video / silent / glanceable-not-operable as inviolable law (inherited from calm)
+produced a spec draft padded with an "honest conflicts" section reconciling a video+audio plinth against
+constraints that don't actually apply — the tell that the inheritance was mis-scoped.
+**Recommended then:** (1) a scope line in `CONSTITUTION.md` — it binds the calm suite; adopters borrow the
+register, not the law; (2) soften the adopter pointer from *the choice loses* to *takes calm as the aim*.
+**Ratified 2026-11-26 as Amendment 7, refined into two kinds.** A 2026-07-17 draft had pulled the other way
+(declared adopters bound), because calm-* projects want the law. The settled shape keeps both: **full calm**
+is a documented opt-in (a `calm-*` name + the full-calm pointer, law with scoped exceptions); everything
+else is **built on calm**, taking only the layers it names (method, voice, identity, Articles, mechanics).
+Reverie moves to built on calm. Templates: `ADOPTING.md` §1a and §1b.
+→ Related: [`docs/research/generative-drift-accepted.md`](./research/generative-drift-accepted.md) (the Reverie
+work that surfaced this). Reasoned, not sourced — an owner governance call.
+
 ## 2026-07-06 · Drift you accept — the calm move when a generative tool won't obey (→ full report)
 
 **Q:** calm's generative art is deterministic (drift: seed = instruction, full control). Reverie generates
