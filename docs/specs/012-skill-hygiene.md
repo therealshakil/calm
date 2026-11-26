@@ -20,7 +20,9 @@ This spec applies it to skills.
 Advances Article I (finite, glanceable), VIII and IX (subtract; stays small), via the Subtraction Ladder
 ([`./010-subtraction-ladder.md`](./010-subtraction-ladder.md)).
 
-**Where the set stands (2026-11-26).** Five skills, all healthy:
+**Where the set stands (2026-11-26).** Five skills, all healthy. ai-scout passes line 4 by its own locked
+design: digests go to its own repo, and its one PR into calm is a draft it never merges, so the person's
+merge is the confirmation (calm-research spec 001, R4).
 
 | Skill | Description | Body | Who starts it |
 |---|---|---|---|
