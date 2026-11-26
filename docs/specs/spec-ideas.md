@@ -7,7 +7,7 @@ its research. Promote via the normal flow; Constitution-level changes go through
 
 ## Constitution steward — keeps calm true to its Constitution (catches breakage + slippage)
 
-**Promoted (2026-11-26):** now spec [`015-constitution-steward.md`](./015-constitution-steward.md), draft.
+**Promoted (2026-11-26):** now spec [`015-constitution-steward.md`](./015-constitution-steward.md), locked and built.
 The seed below is kept for its history.
 
 **Idea-drop (2026-07-05):** an agent that runs the **Constitution Check** *for real* — auditing work against

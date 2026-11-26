@@ -1,7 +1,7 @@
 # Spec — Constitution steward
 <!-- filename: 015-constitution-steward.md — numbered per collection, in introduction order -->
 
-**Status:** draft — to lock · **Date:** 2026-11-26 · **Scope:** calm and `calm-*` repos
+**Status:** locked — co-authored with the maintainer (2026-11-26: "y", leans accepted); built · **Date:** 2026-11-26 · **Scope:** calm and `calm-*` repos
 
 The Constitution Check, run by a second pair of eyes instead of the author.
 
@@ -93,15 +93,17 @@ The skill tells the assistant to spawn one subagent (R2) with the target, `CONST
 Budgets, and to return the report in the shape above. `CLAUDE.md`'s "How we work" gains one line:
 run the steward before a lock and before a one-way merge (R7).
 
-## Open questions
+## Decided (at lock)
 
-- **Periodic review.** The Constitution asks for one at least monthly. Lean: leave it out of v1; once the
-  steward has earned trust at lock and merge, a monthly cloud run (public in, public out) could carry it.
-- **Model.** Lean: the subagent runs on a different model from the author's, for a genuinely second view.
+- **Periodic review.** Out of v1. Once the steward has earned trust at lock and merge, a monthly cloud run
+  (public in, public out) could carry it.
+- **Model.** The subagent runs on a different model from the author's, for a genuinely second view.
 
 ## Tasks
 
-Filled at build time (after lock); each cites its requirement.
+- [x] The skill, `.claude/skills/constitution-steward/SKILL.md` (R1–R6, R8).
+- [x] One line in `CLAUDE.md` "How we work": run it before a lock and a one-way merge (R7).
+- [x] First run: on this spec's own branch, before it merged (R7).
 
 ## Constitution Check
 

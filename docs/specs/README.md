@@ -27,7 +27,7 @@ plus the **spec-drops** that aren't tied to any one tool. Format + flow:
   report-drops private first (suite-wide). *Locked (co-authored); built.*
 - **Constitution steward** → [`./015-constitution-steward.md`](./015-constitution-steward.md) — the Check, run
   by a second pair of eyes: typed findings, report-only, quiet when clean; runs before a lock and a one-way
-  merge (suite-wide). *Draft.*
+  merge (suite-wide). *Locked (co-authored); built.*
 - **Idea-space upkeep** → [`./005-idea-space-upkeep.md`](./005-idea-space-upkeep.md) — keeping `Calm.md` current:
   inline status-tracks-reality + a calm reconciliation pass; graduates the *Idea prune* seed (suite-wide).
   *Locked (co-authored).*
