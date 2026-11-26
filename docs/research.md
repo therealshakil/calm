@@ -23,9 +23,13 @@ for it.
 Treating images-only / no-video / silent / glanceable-not-operable as inviolable law (inherited from calm)
 produced a spec draft padded with an "honest conflicts" section reconciling a video+audio plinth against
 constraints that don't actually apply — the tell that the inheritance was mis-scoped.
-**Recommend (you lock the edits):** (1) a **scope line in `CONSTITUTION.md`** — it binds the calm suite;
-adopters borrow the register, not the law; (2) soften the **"add calm to a project"** pattern in adopter
-`CLAUDE.md`s from *inherits / the choice loses* to *takes calm as the aim, not a gate*.
+**Recommended then:** (1) a scope line in `CONSTITUTION.md` — it binds the calm suite; adopters borrow the
+register, not the law; (2) soften the adopter pointer from *the choice loses* to *takes calm as the aim*.
+**Ratified 2026-11-26 as Amendment 7, refined into two kinds.** A 2026-07-17 draft had pulled the other way
+(declared adopters bound), because calm-* projects want the law. The settled shape keeps both: **full calm**
+is a documented opt-in (a `calm-*` name + the full-calm pointer, law with scoped exceptions); everything
+else is **built on calm**, taking only the layers it names (method, voice, identity, Articles, mechanics).
+Reverie moves to built on calm. Templates: `ADOPTING.md` §1a and §1b.
 → Related: [`docs/research/generative-drift-accepted.md`](./research/generative-drift-accepted.md) (the Reverie
 work that surfaced this). Reasoned, not sourced — an owner governance call.
 

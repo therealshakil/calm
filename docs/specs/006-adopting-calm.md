@@ -2,6 +2,10 @@
 
 **Status:** locked — co-authored with Shakil · **Date:** 2026-06-25 · **Scope:** suite-wide
 
+> **Amended 2026-11-26 (Constitution, Amendment 7).** The kit now has two pointers: **full calm**, a
+> documented opt-in that takes calm as law, and **built on calm**, which takes only the layers it names.
+> See [`ADOPTING.md`](../../ADOPTING.md) §1a and §1b. The rest of this spec stands.
+
 A small, static adoption kit so a new repo inherits calm by **point-and-copy** — no analysis pass — and an
 agent can then build a sibling decisively with the person hands-off.
 

@@ -232,6 +232,17 @@ The gate tied that to a private, personal matter that doesn't belong in a public
 have kept calm closed for reasons unrelated to its quality. Care for the people who use a calm tool lives
 on in the Articles themselves. The Articles are unchanged.
 
+**7. (2026-11-26) — Two kinds of adopter: full calm is an opt-in; everything else is built on calm.**
+Ratifies the scope section: the Constitution binds the suite and full-calm adopters, which opt in in
+writing (a `calm-*` name and the full-calm pointer), with any departure recorded as a scoped exception.
+Every other project is built on calm and takes only the layers it names. *Rationale:* two lived cases
+pulled in opposite directions. Reverie inherited the whole law and had to write an "honest conflicts"
+section against rules never meant for a gallery (`docs/research.md`, 2026-07-06), while calm-* projects
+like calm-lg-remote and calm-desktop want the law, because it's what keeps them calm as they grow. calm is
+not one indivisible thing; it comes in layers, and projects want different ones. Making full adoption an
+explicit, documented opt-in keeps the law strong where it's chosen and absent where it isn't. The Articles
+are unchanged.
+
 ## Periodic review
 
 On a cadence (each release, and at least monthly), a short review per app: does it still honour each
@@ -251,16 +262,18 @@ Shared across all apps: this document, the voice in `docs/calm-language.md`, and
 typefaces, illustration execution). How research is done is set in `docs/research-method.md`; its evidence
 is logged in `docs/research.md`.
 
-**Scope: what the Constitution governs (proposed clarification, 2026-07-17, not yet locked; you ratify.)**
-The Constitution binds two things, and only two: the **suite calm tools** on the roster below, and
-**declared adopters** that opt in (a repo that inherits this governing law by reference in its `CLAUDE.md`,
-keeping calm's soul while it may hold a named, scoped exception, as Cute Remote does for colour). It does
-**not** bind everything *built with* calm. Calm is often just the hand and the method: the tooling, the
-working way, the taste, used to build an app *for a person* that is not a suite product and never enters
-the roster. Those apps are the maker's own. Calm's care and craft may inform them by choice; the Articles
-are not imposed on them. The default, for anything built with calm that is neither on the roster nor a
-declared adopter, is free. Forcing the Constitution onto a built-with-calm app is itself the error, a small
-un-calm act of over-reach.
+**Scope: what the Constitution governs (Amendment 7).** It binds two things, and only two:
+
+- **The suite** — calm itself and the calm tools on the roster below.
+- **Full-calm adopters** — repos that opt in, in writing. A full-calm adopter is named `calm-<something>`
+  and its `CLAUDE.md` says it takes calm as law (the template is in [`ADOPTING.md`](./ADOPTING.md)). It may
+  hold named, scoped exceptions written down in the project, as calm-lg-remote does for colour; everything
+  not listed follows calm.
+
+Everything else is **built on calm**, and free. Calm is often a base: the method, the voice, the tooling,
+the taste, used for a project with its own look and its own rules. Such a project names the layers it
+takes (method, voice, identity, Articles, mechanics), and only those apply. Nothing binds by default.
+Forcing the Constitution onto a built-on-calm project is itself the error, a small un-calm act of over-reach.
 
 **The roster (gated — Amendment 1):**
 - **Margin** (`apps/margin`) — the calm daily work edition. *Charter written; specs 001–005 locked.*
