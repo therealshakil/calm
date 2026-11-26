@@ -24,5 +24,5 @@ Takes the layers it names; its own rules for the rest.
   poem. Takes the method, voice and mechanics; its own identity (a 90s skate-zine register, marker-orange
   spot).
 - **dotfiles** (private) — the machine handover: HANDOFF.md holds the facts, SETUP.md runs a
-  choices-up-front, resumable installer through a `claude` session. Takes the method, voice, markdown
-  rules and mechanics; no visual surface.
+  choices-up-front, resumable installer through a `claude` session. Takes the Articles, method, voice and
+  mechanics; no visual surface, so no identity.
