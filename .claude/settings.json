@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=$(jq -r \"(.tool_response.filePath // .tool_input.file_path) // empty\"); case \"$f\" in */assets/terminal/ghostty/*) mkdir -p \"$HOME/.config/ghostty/themes\" && cp -f \"$f\" \"$HOME/.config/ghostty/themes/$(basename \"$f\")\" && printf '{\"systemMessage\":\"calm: synced %s into Ghostty\"}' \"$(basename \"$f\")\";; esac",
+            "statusMessage": "Syncing theme into Ghostty"
+          }
+        ]
+      }
+    ]
+  }
+}

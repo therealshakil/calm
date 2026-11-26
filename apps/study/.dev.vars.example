@@ -1,0 +1,6 @@
+# Copy this file to `.dev.vars` (which is gitignored) and fill in the value.
+# Used by v2 cross-source clustering (spec 009). A PERSONAL Anthropic key — study is a personal
+# project, so keep it off any work account (Article X).
+#
+# Create one: https://console.anthropic.com/  →  Settings  →  API keys  →  Create Key
+ANTHROPIC_API_KEY=sk-ant-...

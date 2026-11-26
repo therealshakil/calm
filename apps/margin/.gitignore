@@ -1,0 +1,12 @@
+node_modules/
+.svelte-kit/
+.wrangler/
+dist/
+build/
+.env
+.env.*
+*.local
+.DS_Store
+# secrets & runtime state
+state/
+data/whatnow*.json

@@ -1,0 +1,340 @@
+<title>Margin — daily edition (mockup)</title>
+<style>
+  :root {
+    /* research-led: warm off-white ground + soft warm-black ink reduce pattern
+       glare / visual stress (BDA; Meares-Irlen). Not cosmetic cream. */
+    --ground: #F7F4EC;
+    --ink: #26231E;
+    --ink-2: #6E6757;
+    --rule: rgba(38, 35, 30, 0.16);
+    --rule-strong: rgba(38, 35, 30, 0.42);
+
+    /* mixed type system: hand = warm editorial voice (masthead, from-the-desk,
+       sign-off); serif = serious work content (the lead). both are stand-ins. */
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Hoefler Text", Georgia, serif;
+    --hand: "Bradley Hand", "Chalkboard SE", "Marker Felt", "Comic Sans MS", cursive;
+    --body: "Avenir Next", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  html.dark {
+    --ground: #1B1814;
+    --ink: #E9E4D8;
+    --ink-2: #948D7E;
+    --rule: rgba(233, 228, 216, 0.15);
+    --rule-strong: rgba(233, 228, 216, 0.40);
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--body);
+    line-height: 1.62;
+    transition: background 320ms ease, color 320ms ease;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    body { transition: none; }
+  }
+
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 28px clamp(20px, 5vw, 56px) 72px;
+  }
+
+  /* ---- edition line ---- */
+  .editionline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 12px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .editionline .meta { display: flex; gap: 14px; align-items: baseline; }
+
+  .toggle {
+    font: inherit;
+    font-size: 12px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    background: transparent;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: border-color 200ms ease, color 200ms ease;
+  }
+  .toggle:hover { color: var(--ink); border-color: var(--rule-strong); }
+  .toggle:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+  /* ---- masthead (hand) ---- */
+  .masthead { text-align: center; padding: 30px 0 18px; }
+  .masthead h1 {
+    font-family: var(--hand);
+    font-weight: 700;
+    font-size: clamp(50px, 12vw, 96px);
+    line-height: 0.96;
+    letter-spacing: 0.005em;
+    margin: 0;
+  }
+  .masthead .strap {
+    margin-top: 14px;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .rule-double { border: 0; border-top: 3px double var(--rule-strong); margin: 18px 0 0; }
+  .rule { border: 0; border-top: 1px solid var(--rule); margin: 30px 0; }
+
+  /* ---- section labels ---- */
+  .label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    margin: 0 0 12px;
+  }
+
+  /* ---- from the desk (hand) ---- */
+  .desk { padding-top: 26px; }
+  .desk p.note {
+    font-family: var(--hand);
+    font-size: clamp(19px, 2.8vw, 23px);
+    line-height: 1.4;
+    margin: 0;
+    max-width: 46ch;
+  }
+
+  /* ---- lead (serif — serious work content) ---- */
+  .lead { display: grid; grid-template-columns: 1fr 140px; gap: 28px; align-items: start; }
+  .lead h2 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(30px, 5.4vw, 50px);
+    line-height: 1.08;
+    margin: 0;
+    max-width: 16ch;
+  }
+  .lead .why { margin: 18px 0 0; max-width: 52ch; font-size: 17px; }
+  .lead .spot { color: var(--ink); justify-self: end; }
+  .action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    font-size: 15px;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule-strong);
+    padding-bottom: 3px;
+    transition: gap 200ms ease, border-color 200ms ease;
+  }
+  .action:hover { gap: 12px; border-color: var(--ink); }
+  .action:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+
+  /* ---- two columns ---- */
+  .cols { display: grid; grid-template-columns: 1.25fr 1fr; gap: 40px; }
+  .cols .col + .col { border-left: 1px solid var(--rule); padding-left: 40px; }
+
+  .plate { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 18px; }
+  .plate li .t { font-size: 17px; line-height: 1.35; }
+  .plate li .s { font-size: 14px; color: var(--ink-2); margin-top: 2px; }
+  .plate li.due .t { font-weight: 700; }
+  .due-mark {
+    display: inline-block;
+    width: 8px; height: 8px;
+    background: var(--ink);
+    margin-right: 9px;
+    vertical-align: 1px;
+  }
+
+  .forecast p { margin: 0 0 12px; font-size: 15px; line-height: 1.5; }
+  .forecast strong { font-weight: 700; }
+
+  /* ---- settled ---- */
+  .settled { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+  .settled li { font-size: 16px; display: flex; gap: 11px; align-items: baseline; }
+  .settled .mk { font-family: var(--serif); color: var(--ink-2); }
+  .settled li.letgo .x { text-decoration: line-through; text-decoration-color: var(--rule-strong); color: var(--ink-2); }
+
+  /* ---- cartoon ---- */
+  .cartoon { text-align: center; }
+  .panel {
+    border: 1px solid var(--rule-strong);
+    padding: 26px;
+    display: inline-flex;
+    color: var(--ink);
+    margin-bottom: 14px;
+  }
+  .cartoon .cap {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink-2);
+    max-width: 40ch;
+    margin: 0 auto;
+  }
+
+  /* ---- ending (hand — the editorial voice signing off) ---- */
+  .end { text-align: center; padding-top: 8px; }
+  .end p.sign {
+    font-family: var(--hand);
+    font-size: clamp(20px, 3.2vw, 25px);
+    line-height: 1.35;
+    margin: 0;
+    max-width: 28ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .end .bye { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-2); margin-top: 14px; }
+
+  .colophon {
+    margin-top: 56px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--ink-2);
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 620px) {
+    .lead { grid-template-columns: 1fr; }
+    .lead .spot { justify-self: start; order: -1; }
+    .cols { grid-template-columns: 1fr; gap: 30px; }
+    .cols .col + .col { border-left: 0; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 30px; }
+  }
+</style>
+
+<div class="page">
+
+  <div class="editionline">
+    <div class="meta"><span>No. 412</span><span>Friday</span></div>
+    <button class="toggle" id="theme" type="button" aria-label="Switch between light and dark">Dark</button>
+  </div>
+
+  <header class="masthead">
+    <h1>Margin</h1>
+    <div class="strap">The daily edition &middot; 23 June</div>
+    <hr class="rule-double" />
+  </header>
+
+  <section class="desk">
+    <p class="label">From the desk</p>
+    <p class="note">A lighter edition today &mdash; that&rsquo;s allowed.</p>
+  </section>
+
+  <hr class="rule" />
+
+  <section class="lead">
+    <div>
+      <p class="label">Work on this next</p>
+      <h2>Unblock Alex before standup.</h2>
+      <p class="why">She&rsquo;s waited a day on the auth-migration review &mdash; ten minutes from you
+        clears her whole morning. Nothing else today is load-bearing, so this is the one worth doing first.</p>
+      <a class="action" href="#">Open the review &rarr;</a>
+    </div>
+    <div class="spot" aria-hidden="true">
+      <svg width="140" height="124" viewBox="0 0 140 124" fill="none"
+           stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M34 56 C33 50 36 47 42 47 L96 47 C102 47 105 50 104 56 L100 92 C99 101 94 106 85 106 L53 106 C44 106 39 101 38 92 Z" />
+        <path d="M104 60 C116 58 124 63 123 73 C122 83 113 87 101 85" />
+        <path d="M58 34 C55 28 61 25 59 19" />
+        <path d="M72 34 C69 28 75 25 73 19" />
+        <path d="M86 35 C83 29 89 26 87 20" />
+        <path d="M50 79 C62 84 78 84 90 79" />
+      </svg>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <div class="cols">
+    <section class="col">
+      <p class="label">The rest of your plate</p>
+      <ul class="plate">
+        <li class="due">
+          <div class="t"><span class="due-mark"></span>Reply to Sam about the release date</div>
+          <div class="s">They need it to book the room &mdash; today, ideally.</div>
+        </li>
+        <li>
+          <div class="t">Three small PRs are ready when you are</div>
+          <div class="s">None are blocking anyone. A good filler for a low hour.</div>
+        </li>
+        <li>
+          <div class="t">Draft the sprint notes</div>
+          <div class="s">No rush &mdash; Thursday&rsquo;s fine. This&rsquo;ll keep.</div>
+        </li>
+      </ul>
+    </section>
+    <section class="col forecast">
+      <p class="label">The forecast</p>
+      <p><strong>Thursday looks clear</strong> &mdash; a good day to protect for deep work.</p>
+      <p>Friday fills up by noon. Wednesday you&rsquo;re home.</p>
+      <p>Nothing on the horizon needs you before then.</p>
+    </section>
+  </div>
+
+  <hr class="rule" />
+
+  <section>
+    <p class="label">Settled</p>
+    <ul class="settled">
+      <li><span class="mk">&#10003;</span><span>Closed CAL-2188 &mdash; the flaky test that&rsquo;s nagged all week.</span></li>
+      <li class="letgo"><span class="mk">&mdash;</span><span class="x">Let go: the dashboard refactor. Won&rsquo;t do, and that&rsquo;s fine.</span></li>
+    </ul>
+  </section>
+
+  <hr class="rule" />
+
+  <section class="cartoon">
+    <p class="label">The cartoon</p>
+    <div class="panel" aria-hidden="true">
+      <svg width="150" height="96" viewBox="0 0 150 96" fill="none"
+           stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="44" cy="34" r="13" />
+        <path d="M44 47 L44 74 M44 54 L30 64 M44 54 L58 64 M44 74 L34 90 M44 74 L54 90" />
+        <rect x="74" y="40" width="40" height="30" rx="2" />
+        <path d="M80 40 L80 70 M88 40 L88 70 M96 40 L96 70 M104 40 L104 70" />
+        <path d="M62 22 C70 14 92 14 100 20" />
+      </svg>
+    </div>
+    <p class="cap">&ldquo;I&rsquo;ll just check one thing,&rdquo; he said, opening seven tabs.</p>
+  </section>
+
+  <hr class="rule" />
+
+  <section class="end">
+    <p class="sign">That&rsquo;s the edition. Nothing else is waiting on you.</p>
+    <p class="bye">See you tomorrow</p>
+  </section>
+
+  <p class="colophon">
+    Mockup &middot; paper &amp; ink warmth is research-led (reduces glare / visual stress), not cosmetic<br />
+    body stands in for Atkinson Hyperlegible / Lexend &middot; hand + serif are stand-ins &middot; no accent colour
+  </p>
+
+</div>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var theme = document.getElementById("theme");
+    function setTheme(dark) {
+      root.classList.toggle("dark", dark);
+      theme.textContent = dark ? "Light" : "Dark";
+    }
+    setTheme(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    theme.addEventListener("click", function () { setTheme(!root.classList.contains("dark")); });
+  })();
+</script>

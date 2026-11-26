@@ -1,0 +1,111 @@
+# study — feed list (v1)
+#
+# The sources study gathers into its finite, prepared reading room — not a live feed.
+# Curated 2026-07-15: researched (every feed fetched + verified live) and stress-tested by
+# the calm-council. Principle: few, high-signal, low-noise, ND-friendly — no firehoses, no
+# upsell, no anxious news-doom. Adding or removing a feed is a one-line edit + commit (spec 003).
+#
+# Geared to personal learning across four areas, plus one deliberate counterweight
+# (the council flagged the risk of an all-agreeing echo chamber). `why` is the curation reason —
+# it surfaces as the item's `why?` (specs 001/005).
+
+# --- Neurodivergence ---------------------------------------------------------
+
+[[feeds]]
+title = "Neurodivergent Insights"
+url = "https://neurodivergentinsights.substack.com/feed"
+section = "Neurodivergence"
+why = "Affirming, clinically-grounded essays on autism/ADHD (Dr Megan Anna Neff) — the anchor."
+
+[[feeds]]
+title = "Stimpunks Foundation"
+url = "https://stimpunks.org/feed/"
+section = "Neurodivergence"
+why = "ND-led, practical guides on accessibility and ND-aware design — closest to how you build."
+
+[[feeds]]
+title = "Neurodivergent Rebel"
+url = "https://neurodivergentrebel.com/feed"
+section = "Neurodivergence"
+why = "Long-running autistic/ADHD writing — anti-assimilation, lived-experience, and still active."
+
+[[feeds]]
+title = "The Autistic Advocate"
+url = "https://theautisticadvocate.com/feed"
+section = "Neurodivergence"
+why = "UK advocacy, plain-spoken and affirming; low posting frequency keeps it calm."
+
+# --- Agentic & AI engineering (incl. a deliberate skeptic) -------------------
+
+[[feeds]]
+title = "Simon Willison's Weblog"
+url = "https://simonwillison.net/atom/everything/"
+section = "Agentic engineering"
+why = "The best in-the-trenches record of building with LLMs. Posts often — the finite edition buffers the volume; drop it if the room starts to feel Willison-shaped."
+
+[[feeds]]
+title = "Hamel Husain"
+url = "https://hamel.dev/index.xml"
+section = "Agentic engineering"
+why = "Evals and reliability — the discipline behind spec-driven quality."
+
+[[feeds]]
+title = "Eugene Yan"
+url = "https://eugeneyan.com/rss/"
+section = "Agentic engineering"
+why = "Applied ML/LLM systems from someone shipping in production — evals, RAG, agent patterns."
+
+[[feeds]]
+title = "Baldur Bjarnason"
+url = "https://www.baldurbjarnason.com/index.xml"
+section = "Agentic engineering"
+why = "The counterweight — a rigorous, calm AI-skeptic, so the room pressure-tests the premise instead of echoing it."
+
+# --- Calm & humane technology ------------------------------------------------
+
+[[feeds]]
+title = "The Convivial Society"
+url = "https://theconvivialsociety.substack.com/feed"
+section = "Calm & humane tech"
+why = "Unhurried essays on technology, attention and being human (L.M. Sacasas)."
+
+[[feeds]]
+title = "Cal Newport — Study Hacks"
+url = "https://www.calnewport.com/blog/feed/"
+section = "Calm & humane tech"
+why = "Deep work and digital minimalism, plainly argued."
+
+[[feeds]]
+title = "Ness Labs"
+url = "https://nesslabs.com/feed"
+section = "Calm & humane tech"
+why = "Neuroscience-informed mindful productivity — bridges calm and ND."
+
+# --- Spec-driven & AI-assisted engineering -----------------------------------
+
+[[feeds]]
+title = "Martin Fowler"
+url = "https://martinfowler.com/feed.atom"
+section = "Spec-driven & AI-SWE"
+why = "Canonical software design, now writing directly on the AI era — durable, architecture-first."
+
+[[feeds]]
+title = "Claude Code changelog"
+url = "https://raw.githubusercontent.com/anthropics/claude-code/main/feed.xml"
+section = "Spec-driven & AI-SWE"
+why = "The one official Anthropic feed that exists — low-volume, directly your toolchain."
+
+# --- Grow later (uncomment / add when you want more) -------------------------
+# Good sources held back to keep v1 calm — spec-driven starts thinnest and grows with your
+# practice. One-line add each:
+#   Devon Price (ND critique) · Chip Huyen (AI systems — dormant since Jan 2025, watch for revival)
+#   · Lil'Log (deep, rare) · Interconnects / Nathan Lambert (frontier) · Raptitude
+#   · GitHub Spec Kit releases · The Pragmatic Engineer · Addy Osmani · Kent Beck
+#
+# Dropped — feed dormant (caught by the fetcher, not by "does it resolve"):
+#   NeuroClastic — last post Dec 2024 · Chip Huyen — last post Jan 2025
+#   (→ replaced by Neurodivergent Rebel and Eugene Yan, both active)
+#
+# Deliberately NOT added (against the calm bar, with reason):
+#   Latent Space — firehose volume · Extra Focus — upsell posts in the feed
+#   · Center for Humane Tech — anxious AI-policy news · Amber Case / Medium — off-topic drift

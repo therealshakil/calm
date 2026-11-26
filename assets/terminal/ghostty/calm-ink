@@ -1,0 +1,22 @@
+# calm-ink (dark) — calm suite identity (brighter ND/CLI palette)
+background = #1B1814
+foreground = #ECE6D8
+cursor-color = #EDB489
+selection-background = #2E2A23
+selection-foreground = #ECE6D8
+palette = 0=#2A2620
+palette = 1=#F09B82
+palette = 2=#BBD68A
+palette = 3=#F1D178
+palette = 4=#A9C8EC
+palette = 5=#DDB4DC
+palette = 6=#A0DACB
+palette = 7=#D7D0C2
+palette = 8=#6B6456
+palette = 9=#F4AD96
+palette = 10=#C9DF9E
+palette = 11=#F6DC93
+palette = 12=#BCD5F1
+palette = 13=#E7C5E6
+palette = 14=#B5E4D7
+palette = 15=#F3EDDF

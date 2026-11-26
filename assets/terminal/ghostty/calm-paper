@@ -1,0 +1,22 @@
+# calm-paper (light) — calm suite identity (brighter ND/CLI palette)
+background = #F7F4EC
+foreground = #26231E
+cursor-color = #B5612F
+selection-background = #E7E1D2
+selection-foreground = #26231E
+palette = 0=#3A352E
+palette = 1=#BB472E
+palette = 2=#5C772D
+palette = 3=#946611
+palette = 4=#2F5E94
+palette = 5=#944C86
+palette = 6=#2B7B6F
+palette = 7=#6B6456
+palette = 8=#5D574B
+palette = 9=#943C29
+palette = 10=#4A5F25
+palette = 11=#745212
+palette = 12=#30598B
+palette = 13=#7D4472
+palette = 14=#236159
+palette = 15=#26231E

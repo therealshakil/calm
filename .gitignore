@@ -1,0 +1,9 @@
+# Personal, machine-local Claude Code settings (permissions, local paths) — not shared
+.claude/settings.local.json
+# Prompt Warden's calm log is a personal, machine-local record (the real one lives at ~/.claude/warden/)
+.claude/warden/log.md
+# Python bytecode caches — build artifacts, never committed
+__pycache__/
+*.pyc
+# macOS Finder metadata — never ours, never committed
+.DS_Store
